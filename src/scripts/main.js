@@ -1,12 +1,13 @@
 import { createPlan } from "./plan.js"
-import { createAsparagus } from "./seeds/asparagus.js"
-import { createCorn } from "./seeds/corn.js"
-import { createPotato } from "./seeds/potato.js"
-import { createSoybean } from "./seeds/soybean.js"
-import { createSunflower } from "./seeds/sunflower.js"
-import { createWheat } from "./seeds/wheat.js"
+// import { createAsparagus } from "./seeds/asparagus.js"
+// import { createCorn } from "./seeds/corn.js"
+// import { createPotato } from "./seeds/potato.js"
+// import { createSoybean } from "./seeds/soybean.js"
+// import { createSunflower } from "./seeds/sunflower.js"
+// import { createWheat } from "./seeds/wheat.js"
 import { addPlant, usePlants } from "./field.js"
 import { plantSeeds } from "./tractor.js"
+import { harvestPlants } from "./harvester.js"
 
 
 console.log("Welcome to the main module")
@@ -44,7 +45,18 @@ console.log("Welcome to the main module")
 //     ]
 // )
 
+// Get array containing list of strings that represent crop types
 const yearlyPlantingPlan = createPlan();
+
+// Use array as input to function that populates another array with
+// objects representing crop types
 plantSeeds(yearlyPlantingPlan)
+
+// Retrieve this new array of objects...
 const field = usePlants()
-console.log(field)
+
+// ... run them through the harvester...
+const harvest = harvestPlants(field)
+
+// ...and display.
+console.log(harvest)
