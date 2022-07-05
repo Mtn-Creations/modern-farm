@@ -34,3 +34,16 @@ h1,h2,h3,h4,h5,h6 {
     background-color: darksalmon;
 }
 
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.plant {
+    background: lightgoldenrodyellow;
+    flex-grow: 1;
+    padding: 1em;
+    font-size: 2em;
+    font-weight:500;
+}
