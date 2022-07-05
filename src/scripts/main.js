@@ -8,7 +8,7 @@ import { createPlan } from "./plan.js"
 import { addPlant, usePlants } from "./field.js"
 import { plantSeeds } from "./tractor.js"
 import { harvestPlants } from "./harvester.js"
-
+import { Catalog } from "./catalog.js"
 
 console.log("Welcome to the main module")
 
@@ -60,3 +60,4 @@ const harvest = harvestPlants(field)
 
 // ...and display.
 console.log(harvest)
+Catalog(harvest)
